@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Парфуми — Price List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #1a1a1a, #2c2c2c);
+      color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #1e1e1e;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .header img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin: 30px 0;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 1.5em;
+      border-bottom: 2px solid #ff7f50;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .price-list, .promo-list {
+      line-height: 1.8;
+      font-size: 1.1em;
+      padding-left: 10px;
+    }
+
+    .perfume-names ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .perfume-names li {
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #ff7f50;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .btn:hover {
+      background-color: #e06641;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255,127,80,0.5)
+    }
+    .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  </style>
+</head>
+<body>
+  <div class="section fade-in">
+  <div class="container">
+    <div class="header">
+    </div>
+
+    <h1>Price List</h1>
+
+    <div class="section">
+      <div class="section-title">ПАРФУМИ</div>
+      <div class="price-list">
+        • 5 мл <span style="font-size: 0.8em; color: #aaa;">(пробник)</span> — <b>70 грн</b><br>
+        • 13 мл <span style="font-size: 0.8em; color: #aaa;">(тревел-флакон)</span> — <b>200 грн</b><br>
+        • 30 мл — <b>300 грн</b><br>
+        • 50 мл — <b>400 грн</b>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">АКЦІЇ</div>
+      <div class="promo-list">
+        • Безкоштовна доставка замовлень від <b>600 грн</b><br>
+        • Пробники <b>5+1</b> у подарунок
+      </div>
+    </div>
+
+    <div class="section perfume-names">
+      <div class="section-title">Парфуми</div>
+      <a href="https://www.instagram.com/zapax_perfume?igsh=eG50NDBtMm9tYjly" class="btn">Допомогти обрати</a>
+      <a href="https://www.instagram.com/zapax_perfume?igsh=eG50NDBtMm9tYjly" class="btn">Замовити зараз</a>
+    </div>
+
+    <a onclick="window.open('women parfume.html','_blank')" class="btn">Жіночі аромати</a>
+	<a onclick="window.open('men parfume.html','_blank')" class="btn">Чоловічі аромати</a>
+	<a onclick="window.open('uni parfume.html','_blank')" class="btn">Унісекс аромати</a>
+  </div>
+  <script>
+  const sections = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = $;{Math.random() * 0.5}s;
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+</body>
+</html>
