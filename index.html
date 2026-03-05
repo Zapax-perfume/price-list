@@ -98,6 +98,27 @@
   opacity: 1;
   transform: translateY(0);
 }
+	  /* Стилі для блоку з кнопками */
+    .perfume-names {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* Відстань між кнопками */
+    }
+
+    /* Оновлення стилів для кнопок у цьому блоці */
+    .perfume-names .btn {
+      width: 100%; 
+      max-width: 300px; /* Щоб на комп'ютері кнопки не розтягувалися на весь екран */
+      text-align: center;
+      margin-top: 0; /* Прибираємо старий відступ, бо тепер працює gap */
+      box-sizing: border-box;
+    }
+
+    /* Вирівнювання заголовка по центру над кнопками */
+    .perfume-names .section-title {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -158,6 +179,7 @@
 </body>
 
 </html>
+
 
 
 
