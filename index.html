@@ -102,7 +102,7 @@
     .perfume-names {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 15px; /* Відстань між кнопками */
     }
 
@@ -119,6 +119,23 @@
     .perfume-names .section-title {
       margin-bottom: 20px;
     }
+    .header-subtitle {
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa; /* Светло-серый цвет, как у примечаний к ценам */
+  margin-top: -10px; /* Подтягиваем ближе к фото */
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.button-subtitle {
+  font-size: 0.85em;
+  color: #aaa;
+  text-align: center;
+  margin: -5px 0 5px 0; /* Небольшие отступы, чтобы текст был ровно между кнопками */
+  font-style: italic;
+  width: 100%;
+  max-width: 300px; /* Чтобы ширина совпадала с кнопками */
+}
   </style>
 </head>
 <body>
@@ -148,13 +165,12 @@
     </div>
    <div class="section perfume-names">
       <div class="section-title">Парфуми</div>
-      <br></br>
       <a onclick="window.open('women parfume.html','_blank')" class="btn">Жіночі аромати</a>
       <a onclick="window.open('men parfume.html','_blank')" class="btn">Чоловічі аромати</a>
       <a onclick="window.open('uni parfume.html','_blank')" class="btn">Унісекс аромати</a>
-      
+      <h1></h1>
       <a href="https://ig.me/m/zapax_perfume" class="btn">Допомогти обрати</a>
-      <a href="https://www.instagram.com/zapax_perfume?igsh=eG50NDBtMm9tYjly" class="btn">Замовити зараз</a>
+      <div class="button-subtitle">Тут можна замовити або отримати консультацію</div>
     </div>
 	  
   </div>
@@ -179,8 +195,3 @@
 </body>
 
 </html>
-
-
-
-
-
